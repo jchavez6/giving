@@ -2,10 +2,14 @@ body{
     font-family: 'proxima-nova', sans-serif;
     font-size: 18px;
     color: white;
-    background: rgb(18,38,102);
+    /* background: rgb(18,38,102); */
+    background: url(img/DPI_Waterfront_OPT-3-1.jpeg);
     display: flex;
     justify-content: center;
     min-height: 100vh;
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
 }
 .container{
     display: flex;
@@ -13,8 +17,10 @@ body{
     align-items: center;
     /* height: 650px; */
     width: 1200px;
+    padding-bottom: 5em;
 }
 .card-container{
+        background: rgb(18,38,102);
     padding: 2em;
     text-align: ;
     max-width: 750px;
@@ -23,6 +29,51 @@ body{
     border-radius: 10px;
     box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.546);
 }
+.top-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+.top-card img{
+    max-width: 250px;
+    align-items: center;
+}
 .container h1{
     font-size: 3em;
+    margin: 0;
+}
+footer{
+    /* margin-top: 80px; */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* background: rgb(42, 42, 42); */
+    background: rgb(18,38,102);
+    height: auto;
+    width: 100vw;
+    padding-top: 10px;
+    /* border-top: 1px solid rgb(202, 202, 202); */
+    /* margin-bottom: -2em; */
+    color: #fff;
+    /* box-shadow: 10px 0px 30px 1px rgba(0, 0, 0, 0.546); */
+
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+.right-footer{
+    font-size: smaller;
+    padding-left: 15px;
+}
+.left-footer{
+    padding-right: 15px;
+}
+.logo-footer img{
+    max-width: 260px;
 }
