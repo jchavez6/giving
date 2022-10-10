@@ -117,11 +117,16 @@ select {
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-
+    font-family: proxima-nova;
+    font-size: 1em;
+    color: rgb(54, 54, 54);
+    border-radius: 10px;
 }
 select{
-  
-}
-input[type=number]{
-
+    appearance: none;
+    background-image: url(img/down.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 3px)center;
+    background-size: 25px;
+    padding-right: 30px;
 }
