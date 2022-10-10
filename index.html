@@ -12,9 +12,8 @@
     </style>
 </head>
 <body>
-    <h1>Testing</h1>
 
-    <form class="giving-form" method="post"
+    <!-- <form class="giving-form" method="post"
         action="https://payments.uif.uillinois.edu/Gifts/PaymentPageTransfer.aspx" data-giving-form="">
 
         <div class="fund-section-wrapper">
@@ -141,7 +140,96 @@
             </div>
             <input type="submit" value="Continue">
         </form>
-</div>
-       
+</div> -->
+      
+<!-- 
+<form id="donation-form" action="PaymentTransfer.aspx" class="gift-form" method="post">
+    <input name="TRACKING_CODE" type="hidden" value="23385966">
+    <div>
+        <select id="funds-list" class="">
+            <option value="" disabled="disabled" selected="selected">Choose a fund</option>
+            <option value="1140742/College of Business Scholarship Fund">College of Business Scholarship Fund
+            </option>
+            <option value="114177/College of Business Faculty Excellence Fund">College of Business Faculty Excellence
+                Fund</option>
+            <option value="113119/College of Business Innovation Fund">College of Business Innovation Fund
+            </option>
+            <option value="113119/College of Business Annual Fund">College of Business Annual Fund
+            </option>
+            <option value="113014/College of Business Emergency Scholarship Fund">College of Business Emergency
+                Scholarship Fund</option>
+        </select>
+    </div>
+    <div class="giving-fund-input-wrapper">
+        <span class="giving-fund-input-prefix" role="presentation">$</span>
+        <input data-fund="true" type="hidden" name="FUND1" value="1140742/College of Business Scholarship Fund">
+        <input data-amount="true" class="giving-fund-input" id="fund-1140742" type="number" min="5" name="GIFT_AMOUNT1"
+            label="gift dollar amount for College of Business Scholarship Fund">
+    </div>
+    <input type="submit" value="Continue">
+</form> -->
+<form id="donation-form" action="PaymentTransfer.aspx" class="gift-form" method="post">
+    <input name="TRACKING_CODE" type="hidden" value="23385966">
+    <div>
+        <select id="funds-list" class="">
+            <option value="" disabled="disabled" selected="selected">Choose a fund</option>
+            <option value="1140742/College of Business Scholarship Fund" data-FUND="FUND1" data-GIFT="GIFT_AMOUNT1">
+                College of Business Scholarship Fund
+            </option>
+            <option value="114177/College of Business Faculty Excellence Fund" data-FUND="FUND2"
+                data-GIFT="GIFT_AMOUNT2">College of Business Faculty Excellence Fund</option>
+            <option value="113119/College of Business Innovation Fund" data-FUND="FUND3" data-GIFT="GIFT_AMOUNT3">
+                College of Business Innovation Fund
+            </option>
+            <option value="113119/College of Business Annual Fund" data-FUND="FUND4" data-GIFT="GIFT_AMOUNT4">
+                College of Business Annual Fund
+            </option>
+            <option value="113014/College of Business Emergency Scholarship Fund" data-FUND="FUND5"
+                data-GIFT="GIFT_AMOUNT5">College of Business Emergency Scholarship Fund</option>
+        </select>
+    </div>
+    <div class="giving-fund-input-wrapper">
+        <span class="giving-fund-input-prefix" role="presentation">
+            $
+        </span>
+        <input id="hidden-fund-input" type="hidden" name="FUND1" value="1140742/College of Business Scholarship Fund">
+        <input class="giving-fund-input" id="fund-1140742" type="number" min="5" name="GIFT_AMOUNT1"
+            label="gift dollar amount for College of Business Scholarship Fund">
+    </div>
+    <input type="submit" value="Continue">
+</form>
+
+
 </body>
+<script>
+    // var list = document.querySelector("#funds-list");
+
+    // list.addEventListener("change", function (ev) {
+
+    //     var index = list.selectedIndex
+    //     var fund = document.querySelector("[data-fund=true]");
+    //     var amount = document.querySelector("[data-amount=true]");
+
+    //     fund.setAttribute('name', 'FUND' + index)
+    //     amount.setAttribute('name', 'GIFT_AMOUNT' + index)
+
+    //     console.log(`renamed to FUND${index} and GIFT_AMOUNT${index}`)
+    // })
+    const fundList = document.getElementById('funds-list');
+        const hiddenFundInput = document.getElementById('hidden-fund-input');
+        const givingFundInput = document.getElementById('fund-1140742');
+
+        // when a new option is selected
+        fundList.onchange = function (e) {
+            // get the option that is currently selected
+            let selectedOption = fundList.options[fundList.selectedIndex];
+
+            // get the data- attributes that was set in the HTML and 
+            // assign to the inputs
+            hiddenFundInput.name = selectedOption.getAttribute('data-FUND');
+            hiddenFundInput.value = selectedOption.value;
+            givingFundInput.name = selectedOption.getAttribute('data-GIFT');
+
+        }
+</script>
 </html>

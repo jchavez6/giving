@@ -23,33 +23,46 @@
                 <h3>Make your gift to DPI.</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima qui inventore perspiciatis fuga similique sed in, porro ipsa dolores nisi blanditiis vero molestias ullam omnis corrupti temporibus, quasi, sunt dolor.</p>
             </div>
-            <div class="fund-section">
-                <h3>Support Community Education</h3>
-                <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima qui inventore perspiciatis fuga similique sed in, porro ipsa dolores nisi blanditiis vero molestias ullam omnis corrupti temporibus, quasi, sunt dolor.</p> -->
-                    <label for="fname">Make your gift to Community Education</label><br>
-                    <input type="text" id="fname" name="fname" value="$"><br>
-            </div>
-            <div class="fund-section">
-                <h3>Support Applied Research and Development</h3>
-                <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima qui inventore perspiciatis fuga similique sed in, porro ipsa dolores nisi blanditiis vero molestias ullam omnis corrupti temporibus, quasi, sunt dolor.</p> -->
-                    <label for="fname">Make your gift to Applied R&D</label><br>
-                    <input type="text" id="fname" name="fname" value="$"><br>
-            </div>
-            <div class="fund-section">
-                <h3>Support Business Building</h3>
-                <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima qui inventore perspiciatis fuga similique sed in, porro ipsa dolores nisi blanditiis vero molestias ullam omnis corrupti temporibus, quasi, sunt dolor.</p> -->
-                    <label for="fname">Make your gift to DPI Business Building</label><br>
-                    <input type="text" id="fname" name="fname" value="$"><br>
-            </div>
-            <div class="fund-section">
-                <h3>General Fund</h3>
-                <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima qui inventore perspiciatis fuga similique sed in, porro ipsa dolores nisi blanditiis vero molestias ullam omnis corrupti temporibus, quasi, sunt dolor.</p> -->
-                    <label for="fname">Make your gift to the General Fund</label><br>
-                    <input type="text" id="fname" name="fname" value="$"><br>
-            </div>
-            <div class="button-container">
-                <input type="button" class="button" value="Continue">
-            </div>
+            <form id="donation-form" action="PaymentTransfer.aspx" class="gift-form" method="post">
+                <div class="fund-section">
+                        <input name="TRACKING_CODE" type="hidden" value="10001">
+                        <div class="drop-down">
+                            <select id="funds-list" class="">
+                                <option value="" disabled="disabled" selected="selected">Choose a fund</option>
+
+                                <option value="12312345/Community Education Fund" data-FUND="FUND1" data-GIFT="GIFT_AMOUNT1">
+                                    Community Education Fund
+                                </option>
+
+                                <option value="114177/Applied Research and Development Fund" data-FUND="FUND2"
+                                    data-GIFT="GIFT_AMOUNT2">Applied Research and Development Fund</option>
+
+                                <option value="113119/New Building Fund" data-FUND="FUND3" data-GIFT="GIFT_AMOUNT3">
+                                    New Building Fund
+                                </option>
+
+                                <option value="113119/General Fund" data-FUND="FUND4" data-GIFT="GIFT_AMOUNT4">
+                                    General Fund
+                                </option>
+
+                            </select>
+                        </div>
+                        <div class="giving-fund-input-wrapper">
+                            <span class="giving-fund-input-prefix" role="presentation">
+                                $
+                            </span>
+                            <input id="hidden-fund-input" type="hidden" name="FUND1" value="12312345/Community Education Fund">
+                            <input class="giving-fund-input" id="fund-amount" type="number" min="5" name="GIFT_AMOUNT1"
+                                label="gift dollar amount for College of Business Scholarship Fund">
+                        </div>
+                         <div class="button-container">
+                            <input type="submit" class="button" value="Continue">
+                        </div>
+                </div>
+            </form>
+
+            
+
         </div>
     </div>
 
@@ -67,4 +80,5 @@
         </div>
     </footer>
 </body>
+<script src="app.js"></script>
 </html>
