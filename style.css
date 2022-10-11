@@ -33,7 +33,7 @@ width: 100%;
     min-width: 650px;
     border-top: 5px solid #75c751;
     border-radius: 10px;
-    box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.546);
+    box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.826);
     /* animation: fadeIn 2s; */
     animation: fadeInTop 1s ease-in-out;
 }
