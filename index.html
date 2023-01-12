@@ -1,61 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.typekit.net/cwg3sbx.css">
-    <title>Document</title>
+    <title>Discovery Partners Institute Giving</title>
+    <link rel="icon" href="img/DPI-dept-logos-541-head.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <style>
-       
+
     </style>
 </head>
-<body >
+
+<body>
     <div class="container">
         <div class="card-container">
             <div class="top-card">
-                
+
                 <h1>Donate to DPI</h1>
                 <div class="card-logo"><img src="img/DPI-logo-side-white-green-crop.png" alt=""></div>
             </div>
             <div class="fund-section-top">
-                <h3>Make your gift to DPI.</h3>
-                <p>Make your gift now to any of the funds listed below. Gift transactions are confidential and secure.</p>
+                <h3>Make your gift to DPI.Now.</h3>
+                <p>Make your gift now to any of the funds listed below. Gift transactions are confidential and secure.
+                </p>
             </div>
-            <form id="donation-form" action="PaymentTransfer.aspx" class="gift-form" method="post">
+            <form id="donation-form" action="https://payments.uif.uillinois.edu/Gifts/PaymentPageTransfer.aspx"
+                class="gift-form" method="POST">
                 <div class="fund-section">
-                        <input name="TRACKING_CODE" type="hidden" value="10001">
-                        <div class="drop-down">
-                            <select id="funds-list" class="">
-                                <option value="" disabled="disabled" selected="selected">Choose a fund</option>
+                    <input name="TRACKING_CODE" type="hidden" value="21088">
+                    <div class="drop-down">
+                        <select id="funds-list" class="">
+                            <option value="" disabled="disabled" selected="selected">Choose a fund</option>
 
-                                <option value="12312345/Community Education Fund" data-FUND="FUND1" data-GIFT="GIFT_AMOUNT1">
-                                    Community Education Fund
-                                </option>
+                            <option value="19338792/DPI CS Educator Training Fund" data-FUND="FUND1"
+                                data-GIFT="GIFT_AMOUNT1">
+                                DPI CS Educator Training Fund
+                            </option>
 
-                                <option value="114177/Applied Research and Development Fund" data-FUND="FUND2"
-                                    data-GIFT="GIFT_AMOUNT2">Applied Research and Development Fund</option>
+                            <option value="19338336/Digital Scholars Program Support Fund" data-FUND="FUND2"
+                                data-GIFT="GIFT_AMOUNT2">Digital Scholars Program Support Fund
+                            </option>
 
-                                <option value="113119/New Building Fund" data-FUND="FUND3" data-GIFT="GIFT_AMOUNT3">
-                                    New Building Fund
-                                </option>
+                            <option value="19341756/Discovery Partners Institute Fund" data-FUND="FUND3"
+                                data-GIFT="GIFT_AMOUNT3">
+                                Discovery Partners Institute Fund
+                            </option>
 
-                                <option value="113119/General Fund" data-FUND="FUND4" data-GIFT="GIFT_AMOUNT4">
+                            <!-- add fund4
+                                    <option value="113119/General Fund" data-FUND="FUND4" data-GIFT="GIFT_AMOUNT4">
                                     General Fund
-                                </option>
+                                </option> -->
 
-                            </select>
-                        </div>
-                        <div class="giving-fund-input-wrapper">
-                            <span class="giving-fund-input-prefix" role="presentation">
-                                $
-                            </span>
-                            <input id="hidden-fund-input" type="hidden" name="FUND1" value="12312345/Community Education Fund">
-                            <input class="giving-fund-input" id="fund-amount" type="number" min="5" name="GIFT_AMOUNT1"
-                                label="gift dollar amount for College of Business Scholarship Fund">
-                        </div>
-                         
+                        </select>
+                    </div>
+                    <div class="giving-fund-input-wrapper">
+                        <span class="giving-fund-input-prefix" role="presentation">
+                            $
+                        </span>
+                        <input id="hidden-fund-input" type="hidden" name="FUND1"
+                            value="12312345/Community Education Fund">
+                        <input class="giving-fund-input" id="fund-amount" type="number" min="5" name="GIFT_AMOUNT1"
+                            label="gift dollar amount for DPI" required>
+                    </div>
+
                 </div>
                 <div class="button-container">
                     <input type="submit" class="button" value="Continue">
@@ -63,9 +73,12 @@
             </form>
 
             <div class="contact-us">
-                <p class="contact-text">If you have any questions or need assistance with your gift, please <span class="contact-link">contact us</span>.</p>
-                
+                <p class="contact-text">If you have any questions or need assistance with your gift, please <span
+                        class="contact-link">contact us</span>.</p>
+            
             </div>
+
+
 
         </div>
     </div>
@@ -78,11 +91,12 @@
                     <img src="img/part-of-university-01.png" alt="">
                 </div>
             </div>
-            <div class="right-footer"> 
+            <div class="right-footer">
                 <p>© 2022 Discovery Partners Institute All Rights Reserved</p>
             </div>
         </div>
     </footer>
 </body>
 <script src="app.js"></script>
+
 </html>
